@@ -4,13 +4,14 @@ Recopila convocatorias de organismos internacionales, evalúa su encaje para una
 
 ![Flujo de recolección, clasificación y notificación](docs/correo.png)
 
+[Ver Google Sheets de ejemplo](https://docs.google.com/spreadsheets/d/1_KLMHsj2L7GdCwFVmNcWJ_F4WsF051TAKOiJTOLn26w/edit?usp=sharing)
+
 ## Cómo funciona
 
 La página envía las instituciones seleccionadas a `POST /api/convocatorias/run` y recibe el progreso por SSE. El backend consulta los registros existentes, recopila avisos, omite los ya clasificados, clasifica y guarda los nuevos e intenta enviar el resumen.
 
-<!-- Cuando agregues la imagen del flujo al repositorio, insértala aquí:
 ![Flujo de recolección, clasificación y notificación](docs/Blankdiagram.png)
---
+
 
 | Archivo del backend | Responsabilidad |
 | --- | --- |
