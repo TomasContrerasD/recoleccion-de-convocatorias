@@ -1,0 +1,10 @@
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+.env*
+credentials.json
+*_secrets.json
+*_token.json
+*.db
+*.sqlite3

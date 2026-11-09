@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ── Design tokens ── */
+@theme {
+  --color-app-border:     #e5e7eb;
+  --color-app-text:       #111827;
+  --color-app-muted:      #9ca3af;
+}
+
+:root {
+  --text-primary:     #111827;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: radial-gradient(ellipse 200% 200% at 100% 0%, rgba(240,152,42,0.18) 0%, transparent 70%), #ffffff;
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+}
+
+::selection {
+  background: rgba(240, 152, 42, 0.25);
+  color: #111827;
+}
+
+/* ── Page wrapper ── */
+.app-page {
+  color: var(--text-primary);
+  min-height: calc(100vh - 60px);
+}
+
+/* ── Static gray card: strong shadow, no hover change ── */
+.app-card-static {
+  border: 1px solid rgba(0,0,0,0.10) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06) !important;
+}
+
+/* ── Container centrado ── */
+.app-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Nav link ── */
+.nav-link {
+  padding: 5px 14px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-link:hover {
+  color: #111827;
+  background: rgba(240, 152, 42, 0.08);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* ── SSE console (intencionalmente oscuro) ── */
+.app-console {
+  background: #0d0b07;
+  border: 1px solid #2a1f10;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+.app-console-bar {
+  background: #1e1a12;
+  border-bottom: 1px solid #2a1f10;
+  padding: 7px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.app-console-label {
+  margin-left: 8px;
+  font-size: 0.68rem;
+  font-family: ui-monospace, monospace;
+  color: #6a5e48;
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "id": "wbg",
+    "nombre": "World Bank Group (WBG)",
+    "pais": "Global",
+    "fuente": "web",
+    "url": "https://projects.worldbank.org/en/projects-operations/opportunities",
+    "comentarios": "",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "rfxnow",
+    "nombre": "WBG Corporate Procurement — RFx Now",
+    "pais": "Global",
+    "fuente": "api",
+    "url": "https://wbgeprocure-rfxnow.worldbank.org/rfxnow/public/advertisement/index.html",
+    "comentarios": "Portal corporativo del WBG Group completo. Incluye IFC, World Bank, MIGA y otros fondos. Sin login requerido.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "beo",
+    "nombre": "IDB — BEO (Bank Executed Operations)",
+    "pais": "América Latina y el Caribe",
+    "fuente": "api_auth",
+    "url": "https://beo-procurement.iadb.org/en/home",
+    "comentarios": "Procurement corporativo del BID. El banco contrata consultoras directamente para su propio trabajo interno (advisory, estudios, evaluaciones). Requiere login con cuenta de Consulting Firm. Análogo a RFx Now del WBG.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "caf",
+    "nombre": "CAF — Development Bank of Latin America and the Caribbean",
+    "pais": "América Latina y el Caribe",
+    "fuente": "html",
+    "url": "https://www.caf.com/en/work-with-us/calls/",
+    "comentarios": "Portal de Calls del CAF. Procurement corporativo del banco. Sin API JSON — scraping HTML con BeautifulSoup. SSL roto en el servidor (verify=False intencional). Incluye consultoría, bienes y otros tipos; OpenAI filtra por relevancia.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "idb",
+    "nombre": "IDB — Inter-American Development Bank",
+    "pais": "América Latina y el Caribe",
+    "fuente": "api",
+    "url": "https://bidfortheamericas.connectamericas.com/es/licitaciones",
+    "comentarios": "Portal ConnectAmericas del BID. Contratos financiados por el BID en proyectos de América Latina. Incluye consultoría, bienes y obras. Se filtra por OpenAI para identificar oportunidades relevantes.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "ungm",
+    "nombre": "UNGM — United Nations Global Marketplace",
+    "pais": "Global (60+ agencias ONU)",
+    "fuente": "html",
+    "url": "https://www.ungm.org/Public/Notice",
+    "comentarios": "Portal público de procurement de toda la familia ONU. POST /Public/Notice/Search con JSON — sin autenticación. Agrega UNDP, UNOPS, UNICEF, WFP, FAO, UNFPA y 54+ agencias más. Filtros: RFP, EOI, CP-QB-FBS. Solo avisos activos (deadline >= hoy). Las convocatorias de UNDP que aparezcan aquí son deduplicadas por Ref No contra el scraper de UNDP.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "undp",
+    "nombre": "UNDP — United Nations Development Programme",
+    "pais": "Global",
+    "fuente": "html",
+    "url": "https://procurement-notices.undp.org/",
+    "comentarios": "Portal público de procurement de UNDP. Todos los avisos activos se cargan en una sola página (filtrado client-side). Sin API. HTML scraping con BeautifulSoup. 400+ avisos activos globalmente — OpenAI filtra por relevancia para América Latina y servicios de consultoría.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "eib",
+    "nombre": "EIB — European Investment Bank",
+    "pais": "Global (foco Europa + países socios)",
+    "fuente": "api",
+    "url": "https://www.eib.org/en/about/procurement/all/index.htm",
+    "comentarios": "API REST pública sin autenticación. Incluye asistencia técnica, estudios, asesoría y proyectos fuera de la UE (non-EU). Cobertura parcial de América Latina (Brasil, Ecuador, etc.). OpenAI filtra por relevancia.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "edcf",
+    "nombre": "EDCF — Economic Development Cooperation Fund (Korea)",
+    "pais": "Global (foco Asia y África)",
+    "fuente": "html",
+    "url": "https://www.edcfkorea.go.kr/fe/HPHFFE065M01",
+    "comentarios": "Portal de procurement del EDCF coreano. Solo disponible en coreano. Sin API — scraping HTML de tablas server-rendered con filtros GET (boardtext9). Filtros aplicados: Energía, Medio ambiente y saneamiento, Otros. ~100 oportunidades activas. Títulos y países traducidos al español vía OpenAI batch.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": false
+  },
+  {
+    "id": "jbic",
+    "nombre": "JBIC — Japan Bank for International Cooperation",
+    "pais": "Japón / Global",
+    "fuente": "html",
+    "url": "https://www.jbic.go.jp/ja/info.html",
+    "comentarios": "Portal de procurement corporativo del JBIC — solo disponible en japonés. Sin API — scraping HTML de tablas server-rendered. Tres secciones: licitación general, convocatoria pública y concurso de planificación. Títulos traducidos al español vía OpenAI en batch.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "jogmec",
+    "nombre": "JOGMEC — Japan Oil, Gas and Metals National Corporation",
+    "pais": "Japón / Global",
+    "fuente": "html",
+    "url": "https://www.jogmec.go.jp/english/bid/search.php",
+    "comentarios": "Portal de licitaciones corporativas del JOGMEC en inglés. Sin API — scraping HTML de tabla server-rendered. Sin columna de deadline (ni en el listado ni en los avisos individuales). Solo se scrapea la primera página; la deduplicación por ID en Sheets evita reprocesar avisos anteriores.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "ebrd",
+    "nombre": "EBRD — European Bank for Reconstruction and Development",
+    "pais": "Europa del Este, Asia Central, MENA",
+    "fuente": "html",
+    "url": "https://ecepp.ebrd.com/delta/noticeSearchResults.html",
+    "comentarios": "DESCARTADA — el servidor ecepp.ebrd.com bloquea conexiones programáticas a nivel TCP (firewall/WAF). Tanto requests como curl_cffi con TLS impersonation Chrome fallan con ConnectTimeout sin recibir respuesta. Mismo patrón que EDCF y KOICA.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": false
+  },
+  {
+    "id": "afdb",
+    "nombre": "AfDB — African Development Bank",
+    "pais": "África",
+    "fuente": "html",
+    "url": "https://www.afdb.org/en/about-us/corporate-procurement/procurement-notices/current-solicitations",
+    "comentarios": "Portal de procurement corporativo del AfDB. Filtro por 8 sectores relevantes via tid_1 GET param (server-side). Paginación via ?page=N (0-indexed, 18 items/página). Fecha de deadline desde atributo ISO content. Incluye solicitudes en inglés y francés.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "adb",
+    "nombre": "ADB — Asian Development Bank",
+    "pais": "Asia y el Pacífico",
+    "fuente": "html",
+    "url": "https://selfservice.adb.org/OA_HTML/OA.jsp?OAFunc=XXCRS_CSRN_HOME_PAGE",
+    "comentarios": "Portal CSRN del ADB — Oracle OAF (server-rendered, sin API). Los filtros de sector/país requieren JavaScript form POST con session tokens; se scrapen todos los avisos activos y OpenAI filtra por relevancia. Paginación: 25 items/página via POST de form OAF. Limitación: si el POST de navegación falla, solo se obtiene la primera página (25 items); como el scraper corre diariamente, las nuevas convocatorias se capturan en las ejecuciones siguientes.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": true
+  },
+  {
+    "id": "aiib",
+    "nombre": "AIIB — Asian Infrastructure Investment Bank",
+    "pais": "Asia, África, América Latina",
+    "fuente": "html",
+    "url": "https://www.aiib.org/en/opportunities/business/corporate-procurement/list/status/open/section/All/type/All",
+    "comentarios": "Portal de procurement corporativo del AIIB — banco multilateral con foco en infraestructura. Sin API JSON — scraping HTML con BeautifulSoup. Los filtros de estado/sección/tipo se codifican en la URL como path segments. Pocas oportunidades activas (~1-5), pero de alto valor. Los links de detalle apuntan al portal Ariba externo.",
+    "fecha_agregada": "2026-11-07",
+    "ultima_actualizacion": "2026-11-07",
+    "activa": false
+  }
+]
